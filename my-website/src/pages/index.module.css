@@ -1,0 +1,69 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.heroBanner {
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 2rem;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-title {
+  /* Set the font-size and line-height to match your design */
+  font-size: 48px;
+  line-height: 1.2;
+  /* Set the height to create a vertical centering effect */
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Set the position to create a full-screen hero */
+  position: relative;
+}
+
+.hero-title span {
+  /* Set the initial visibility to hidden */
+  visibility: hidden;
+}
+
+/* Define the animation keyframes */
+@keyframes typing {
+  0% {
+    visibility: visible;
+    width: 0;
+  }
+  25% {
+    width: 0;
+  }
+  50% {
+    width: auto;
+  }
+  100% {
+    width: auto;
+  }
+}
+
+/* Apply the animation to each word */
+.hero-title span:nth-child(1) {
+  animation: typing 1s steps(10) 0.5s forwards;
+}
+.hero-title span:nth-child(2) {
+  animation: typing 1s steps(10) 1.5s forwards;
+}
+.hero-title span:nth-child(3) {
+  animation: typing 1s steps(10) 2.5s forwards;
+}
+/* Add more span selectors as needed for additional words */
